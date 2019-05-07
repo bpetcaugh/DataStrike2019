@@ -1,6 +1,7 @@
 import pygame
 import sprites
 from gameinfo import Game
+import random
 
 
 #create game instance
@@ -18,8 +19,9 @@ done = False
 
 ss = sprites.SpriteSheet("./images/iconpack1/transp_1.png")
 
+playlist = ["./music/GroovyTower.wav","./music/gloriousmorning.wav","./music/timemachine.wav","./music/finalbattle.wav"]
 
-pygame.mixer.music.load("./music/GroovyTower.wav")
+pygame.mixer.music.load(random.choice(playlist))
 pygame.mixer.music.play(-1)
 
 
