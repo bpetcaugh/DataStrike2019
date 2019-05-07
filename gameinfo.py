@@ -6,7 +6,7 @@ import random
 
 class Game():
     def __init__(self):
-        self.game_map = world.Map(20, "./maps/standard.txt")
+        self.game_map = world.Map(20, self.choosemap())
         self.world_objects = self.game_map.get_init_objects()
         #Red is first, blue is second
         #Randomize bots
@@ -19,6 +19,9 @@ class Game():
         self.logfile = l.Log("gamelog.txt")
         self.shouldIlog = False
 
+    def choosemap(self):
+        maps = ["./maps/standard.txt", "./maps/jon.txt", "./maps/miguel.txt"]
+        return random.choice(maps)
     
     def determine_colors(self):
         num = random.randint(0,2)
