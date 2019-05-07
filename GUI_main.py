@@ -18,8 +18,14 @@ done = False
 
 ss = sprites.SpriteSheet("./images/iconpack1/transp_1.png")
 
+
+pygame.mixer.music.load("./music/GroovyTower.wav")
+pygame.mixer.music.play(-1)
+
+
 hud = pygame.Surface((150,800))
 hud.fill((0,0,0))
+
 
 def translate_location(loc):
     new_loc = (loc[0]*40, loc[1]*40)
