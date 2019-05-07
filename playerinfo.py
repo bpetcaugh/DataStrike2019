@@ -17,5 +17,5 @@ class Player():
     def get_name(self):
         return self.team_name
 
-    def add_resources(self, amount):
+    def mod_resources(self, amount):
         self.resources += amount
